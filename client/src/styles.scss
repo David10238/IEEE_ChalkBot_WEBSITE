@@ -11,11 +11,13 @@ body{
 .flex-container-column {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 .flex-container-row {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .top-bar {
@@ -30,5 +32,9 @@ body{
     background-color: red;
     height: 100%;
     width: 100vw;
+}
 
+.ui-box {
+    @extend .flex-container-column;
+    height:100%;
 }
