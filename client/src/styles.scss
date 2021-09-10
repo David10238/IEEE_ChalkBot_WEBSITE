@@ -1,0 +1,34 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 100vh;
+    height: 100vh;
+    background-color: green;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-bar {
+    @extend .flex-container-row;
+    background-color: blue;
+    height: 50px;
+    width: 100vw;
+}
+
+.ui-row {
+    @extend .flex-container-row;
+    background-color: red;
+    height: 100%;
+    width: 100vw;
+
+}
