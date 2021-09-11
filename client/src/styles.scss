@@ -8,33 +8,65 @@ body{
     background-color: green;
 }
 
+.full-height {
+    height: 100vh
+}
+
+.full-width {
+    width: 100vw
+}
+
+.fill-height {
+    height: 100%
+}
+
+.fill-width {
+    width: 100%
+}
+
 .flex-container-column {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .flex-container-row {
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 
 .top-bar {
     @extend .flex-container-row;
     background-color: blue;
-    height: 50px;
+    height: 100px;
     width: 100vw;
 }
 
 .ui-row {
     @extend .flex-container-row;
+    @extend .fill-height;
+    @extend .full-width;
     background-color: red;
-    height: 100%;
-    width: 100vw;
 }
 
 .ui-box {
     @extend .flex-container-column;
     height:100%;
+}
+
+#bot-actions-column {
+    @extend .ui-box;
+    background-color: brown;
+    width: 500px;
+}
+
+#motor-data-column {
+    @extend .ui-box;
+    background-color: violet;
+    width: 500px;
+}
+
+#message-input-column {
+    @extend .ui-box;
+    @extend .fill-width;
+    background-color: pink;
 }
