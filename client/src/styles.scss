@@ -70,3 +70,22 @@ body{
     @extend .fill-width;
     background-color: pink;
 }
+
+#message-input-box {
+    @extend .fill-height;
+    @extend .fill-width;
+    resize: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    word-wrap: normal;
+}
+
+#message-button {
+    @extend .fill-width;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 50px;
+}
