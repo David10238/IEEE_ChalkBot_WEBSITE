@@ -1,11 +1,23 @@
+$background-color: #000;
+$text-color: #ffff;
+$border-color: #ffff;
+$font: 18px;
+
+$label-background-color: blue;
+$label-text-color:$text-color;
+
+$submission-color: green;
+$submission-color-pressed:yellow;
 
 body{
     margin: 0px;
+    font-size:$font;
     padding: 0px;
     border: 0px;
     width: 100vh;
     height: 100vh;
-    background-color: green;
+    color: $text-color;
+    background-color: $background-color;
 }
 
 .full-height {
@@ -36,8 +48,12 @@ body{
 
 .top-bar {
     @extend .flex-container-row;
-    background-color: blue;
-    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: $label-background-color;
+    color: $label-text-color;
+    font-size: 40px;
     width: 100vw;
 }
 
@@ -45,7 +61,10 @@ body{
     @extend .flex-container-row;
     @extend .fill-height;
     @extend .full-width;
-    background-color: red;
+}
+
+.ui-border {
+    border-left:1px solid $border-color;
 }
 
 .ui-box {
@@ -55,25 +74,26 @@ body{
 
 #bot-actions-column {
     @extend .ui-box;
-    background-color: brown;
+    @extend .ui-border;
     width: 500px;
 }
 
 #motor-data-column {
     @extend .ui-box;
-    background-color: violet;
+    @extend .ui-border;
     width: 500px;
 }
 
 #message-input-column {
     @extend .ui-box;
     @extend .fill-width;
-    background-color: pink;
 }
 
 #message-input-box {
     @extend .fill-height;
     @extend .fill-width;
+    background-color: inherit;
+    color:inherit;
     resize: none;
     outline: none;
     margin: 0;
@@ -84,8 +104,13 @@ body{
 
 #message-button {
     @extend .fill-width;
+    color:$text-color;
+    background-color: $submission-color;
     margin: 0;
     padding: 0;
     border: 0;
     height: 50px;
 }
+#message-button:active{
+    background-color:$submission-color-pressed
+}   
