@@ -8,7 +8,7 @@ function handleSubmission() {
     text = text.split(/\s+/).join('')
 
     if (text.length === 0) {
-        console.log("text is emtpy")
+        console.log("text must contain characters")
         return
     }
 
